@@ -15,4 +15,4 @@ main :: IO ()
 main = let config = defaultConfig {windowTitle = "Bewp"}
            dimensions = windowDimensions config in do
               run config $ render <~ makeGame dimensions
-                                  ~~ constant dimensions
+                                  ~~ Window.dimensions
