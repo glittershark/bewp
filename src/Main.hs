@@ -9,9 +9,10 @@ import Bewp.Game
 import Bewp.Guy
 
 render :: GameState -> (Int, Int) -> Element
-render game (w, h) = collage w h [guyForm . guy $ game]
+render game (w, h) = collage w h [guyForm (guy game) (w, h)]
 
 main :: IO ()
 main = let config = defaultConfig {windowTitle = "Bewp"}
            dimensions = windowDimensions config in do
-              run config $ render <~ makeGame ~~ constant dimensions
+              run config $ render <~ makeGame dimensions
+                                  ~~ constant dimensions
