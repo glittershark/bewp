@@ -15,10 +15,10 @@ moveSpeed :: Double
 moveSpeed = 3
 
 jumpSpeed :: Double
-jumpSpeed = 10
+jumpSpeed = 15
 
 gravity :: Double
-gravity = 0.5
+gravity = 0.8
 
 initialState :: (Int, Int) -> GuyState
 initialState (w, h) = GuyState { gx = 0,
